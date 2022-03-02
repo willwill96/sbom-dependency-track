@@ -1,0 +1,4 @@
+.card {
+    @apply tw-bg-sky-800 tw-rounded-lg;
+    @apply tw-h-fit;
+}

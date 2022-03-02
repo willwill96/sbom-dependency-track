@@ -1,0 +1,10 @@
+scalar Json
+
+type Sbom {
+  sbom: Json
+}
+type Query {
+  root: String
+  sboms: [Sbom]
+  sbomByComponentName(name: String): Sbom
+}

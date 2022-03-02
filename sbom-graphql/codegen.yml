@@ -1,0 +1,15 @@
+generates:
+  src/types/graphql-types.ts:
+    schema: src/schema/schema.graphql
+    plugins:
+      - typescript
+      - typescript-operations
+    config:
+      maybeValue: T
+      skipTypename: true
+      avoidOptionals:
+        field: true
+        object: false
+        inputValue: false
+      namingConvention:
+        enumValues: change-case-all#titleCase

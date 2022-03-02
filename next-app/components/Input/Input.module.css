@@ -1,0 +1,3 @@
+.input {
+    @apply tw-rounded-lg tw-outline-none tw-px-2 tw-py-1 tw-box-border;
+}

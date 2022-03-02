@@ -1,0 +1,19 @@
+.icon-button {
+    /* Colors */
+    @apply hover:tw-bg-gray-200/25 active:tw-bg-gray-400/50;
+    /* Sizing */
+    @apply tw-w-6 lg:tw-w-8;
+    /* Spacing */
+    @apply tw-p-1;
+    /* Borders */
+    @apply tw-rounded-full;
+    /* Animation */
+}
+
+.icon-button > svg {
+    @apply tw-transition-transform;
+}
+
+.icon-button:hover > svg {
+    @apply tw-scale-110;
+}

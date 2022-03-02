@@ -1,0 +1,28 @@
+.root {
+  @apply tw-grid tw-grid-cols-4 md:tw-grid-cols-6 lg:tw-grid-cols-12 tw-gap-4;
+}
+
+.root > * {
+  @apply tw-text-black tw-col-span-12 tw-text-center;
+}
+
+.title {
+  @apply tw-font-bold tw-text-2xl lg:tw-text-6xl tw-my-6;
+}
+
+.list-item {
+  @apply tw-w-full hover:tw-bg-gray-300
+  tw-border-b-2 tw-border-black
+  md:tw-border-b-0
+  tw-p-2
+  active:tw-opacity-60 tw-transition hover:tw-cursor-pointer;
+}
+
+.list-item-name {
+  @apply tw-float-left tw-w-3/4 tw-text-left;
+}
+
+.list-item-version {
+  @apply tw-float-right tw-italic tw-w-1/4 tw-text-right;
+
+}

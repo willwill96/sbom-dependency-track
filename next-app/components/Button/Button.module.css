@@ -1,0 +1,14 @@
+.button {
+    /* Colors */
+    @apply tw-text-sky-800 tw-border-gray-400 tw-bg-gray-200 disabled:tw-text-gray-600 disabled:tw-border-gray-600 disabled:tw-bg-gray-500 hover:tw-bg-gray-300;
+    /* Borders */
+    @apply tw-border-2 tw-rounded-md;
+    /* Font */
+    @apply tw-font-bold tw-text-lg;
+    /* Spacing */
+    @apply tw-px-6 tw-py-1;
+    /* Cursor */
+    @apply tw-cursor-pointer disabled:tw-cursor-default;
+    /* Transitions / Animations */
+    @apply tw-transition-colors tw-ease-in-out;
+}

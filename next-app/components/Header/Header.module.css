@@ -1,0 +1,16 @@
+.header {
+    /* Flex */
+    @apply tw-flex tw-justify-center tw-items-center;
+    /* Colors */
+    @apply tw-bg-gradient-to-r tw-from-[#6504B5] tw-via-sky-800 tw-to-emerald-800;
+    /* Sizing */
+    @apply tw-w-full tw-max-w-full tw-h-12 lg:tw-h-14;
+    /* Spacing */
+    @apply tw-px-2 lg:tw-pl-4;
+    /* Borders */
+    @apply tw-rounded-b-sm;
+}
+
+.header-text {
+    @apply tw-text-sm lg:tw-text-lg;
+}

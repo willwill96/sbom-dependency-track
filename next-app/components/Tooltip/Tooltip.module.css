@@ -1,0 +1,23 @@
+.tooltip {
+    @apply tw-relative;
+}
+.tooltip:hover:before {
+    content: attr(data-title);
+    @apply tw-bg-sky-800 ;
+    /* Sizing/Spacing */
+    max-width: 220px;
+    @apply tw-py-1 tw-px-2;
+    @apply tw-rounded-sm;
+    @apply tw-whitespace-nowrap tw-text-ellipsis tw-overflow-hidden;
+    /* Positioning */
+    @apply tw-translate-y-full tw-translate-x-1/2 tw-bottom-0 tw-absolute;
+}
+.tooltip-align-top:hover:before {
+    @apply tw--translate-y-full;
+}
+.tooltip-align-right:hover:before {
+    @apply tw-translate-x-0 tw-right-0;
+}
+.tooltip-align-left:hover:before {
+    @apply tw-translate-x-0 tw-left-0;
+}

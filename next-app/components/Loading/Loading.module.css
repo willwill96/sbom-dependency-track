@@ -1,0 +1,4 @@
+.loader {
+    @apply tw-w-16 tw-h-16 tw-rounded-full tw-border-gray-400 tw-border-8;
+    @apply tw-animate-loading;
+}
