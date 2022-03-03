@@ -5,6 +5,8 @@ type Sbom {
 }
 type Query {
   root: String
+  appNames: [String]
+  appsWithDependency(dependency: String): [String]
   sboms: [Sbom]
   sbomByComponentName(name: String): Sbom
 }

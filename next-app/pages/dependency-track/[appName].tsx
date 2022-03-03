@@ -1,14 +1,14 @@
 import { gql, useQuery } from '@apollo/client'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import Input from '../components/Input'
-import Loading from '../components/Loading'
-import styles from '../styles/DependencyTrack.module.css'
-import SBOM from '../types/sbom'
+import Input from '../../components/Input'
+import Loading from '../../components/Loading'
+import styles from '../../styles/DependencyTrack.module.css'
+import SBOM from '../../types/sbom'
 
 const sbomsGql = gql`
-  query {
-    sbomByComponentName(name: "dog-search") {
+  query sbomByComponentName($appName: String) {
+    sbomByComponentName(name: $appName) {
       sbom
     }
   }
@@ -16,7 +16,12 @@ const sbomsGql = gql`
 
 const DependencyTrack = () => {
   const router = useRouter()
-  const { loading, data } = useQuery(sbomsGql)
+  const { appName } = router.query
+  const { loading, data } = useQuery(sbomsGql, {
+    variables: {
+      appName,
+    },
+  })
   const [input, setInput] = useState('')
 
   if (loading)

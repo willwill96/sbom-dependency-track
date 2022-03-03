@@ -1,82 +1,20 @@
-.main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+.root {
+  @apply tw-grid tw-grid-cols-4 md:tw-grid-cols-6 lg:tw-grid-cols-12 tw-gap-4;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
-}
-
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
-}
-
-.title a {
-  color: #0070f3;
-  text-decoration: none;
-}
-
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.root > * {
+  @apply tw-text-black tw-col-span-12 tw-text-center;
 }
 
 .title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+  @apply tw-font-bold tw-text-2xl lg:tw-text-6xl tw-my-6;
 }
 
-.title,
-.description {
-  text-align: center;
+.apps-container {
+  @apply tw-grid md:tw-grid-cols-4 tw-grid-cols-2 tw-p-2 tw-pt-6;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
-}
-
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, 'Lucida Console', 'Liberation Mono',
-    'DejaVu Sans Mono', 'Bitstream Vera Sans Mono', 'Courier New', monospace;
-}
-
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
-}
-
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
-}
-
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.app-card {
+  @apply tw-h-24 tw-text-white tw-font-bold tw-flex tw-items-center tw-justify-center tw-text-3xl tw-p-2;
+  @apply hover:tw-opacity-75 hover:tw-cursor-pointer active:tw-opacity-50;
 }
